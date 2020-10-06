@@ -18,6 +18,7 @@ THIS_FILE_DIR = os.path.abspath(os.path.dirname(__file__))
 MODEL_DIR = os.path.join(THIS_FILE_DIR, 'models')
 MODEL_FILENAME = os.path.join(MODEL_DIR, 'tensorflow_inception_graph.pb')
 
+print("Start running app script")
 
 @st.cache
 def download_model_from_web():
@@ -231,4 +232,5 @@ out = do_deepdream(
     iter_n=iterations)
 
 # Close the interaction session.
+print("Finished running app script")
 sess.close()

@@ -229,3 +229,6 @@ write_image(st, img_in)
 out = do_deepdream(
     get_tensor(layer)[:, :, :, channel], img_in, octave_n=octaves,
     iter_n=iterations)
+
+# Close the interaction session.
+sess.close()
